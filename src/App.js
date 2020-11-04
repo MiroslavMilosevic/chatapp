@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom'
+import {Router as Router, Switch, Route, } from 'react-router-dom'
+import { HashRouter,} from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { usersArrayImported, } from './u&p/users'
@@ -44,7 +45,7 @@ function App() {
   
       {/* <Link to={`/one/${el.id}`}>Detalji</Link> */}
 
-      <Router>
+      <HashRouter>
 
         <Switch>
           <Route exact path="/home">
@@ -74,7 +75,7 @@ function App() {
           </Route>
         </Switch>
 
-      </Router>
+      </HashRouter>
 
 
 
