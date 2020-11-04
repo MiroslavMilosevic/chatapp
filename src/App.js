@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-{}
+  <h1>Page 11111111111111111</h1>
 
       {/* <Link to={`/one/${el.id}`}>Detalji</Link> */}
 
@@ -50,9 +50,10 @@ function App() {
         <Switch>
           <Route exact path="/home">
        { user.isLoged!=='null'&&user.isLoged!==null ?  <Home usersArray={usersArray} setUser={setUser} /> : <p>nisi ulogovan</p> } 
-
+       <h1>Page 3333333333</h1>
           </Route>
           <Route exact path="/">
+          <h1>Page 3333333333</h1>
 
             <button onClick={() => {
               console.log(usersArray)
@@ -61,14 +62,14 @@ function App() {
           </Route>
           <Route exact path="/login">
           {  <Login usersArray={usersArray}  setUser={setUser}/> }
-
+          <h1>Page 3333333333</h1>
 
           </Route>
           <Route exact path="/register">
-
+          <h1>Page 3333333333</h1>
           </Route>
           <Route exact path="/chat/:id">
-         
+          <h1>Page 3333333333</h1>
           { user.isLoged!=='null'&&user.isLoged!==null ?  <Chat setUserApp={setUser} />: <p>nisi ulogovan</p> } 
             {/* {localStorage.getItem('user')=== ''? <ParagrafS2>Niste Ulogovani</ParagrafS2> : <Club niz={niz} setNiz={setNiz}></Club>} */}
           </Route>
