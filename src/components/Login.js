@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
-import { BrowserRouter as Router, Link, Redirect,  useHistory } from 'react-router-dom'
-
+// import { BrowserRouter as Router, Link, Redirect,  useHistory } from 'react-router-dom'
+import { BrowserRouter as Redirect,  useHistory } from 'react-router-dom'
+import '../services/style.css'
 export default function Login({usersArray,setUser}) {
 
     const [username, setUsername] = useState('');
@@ -12,10 +13,11 @@ export default function Login({usersArray,setUser}) {
 
     return (
         <div>
-                     
-            <input type='text' placeholder='username' value={username}  onChange={(e)=>{setUsername(e.target.value)}}/>
-            <input type='password' placeholder='password' value={password}  onChange={(e)=>{setPassword(e.target.value)}}/>
-            <button onClick={
+            <div className='inputWraper'>         
+            <input className='inputUsername inputLogin' type='text' placeholder='username' value={username}  onChange={(e)=>{setUsername(e.target.value)}}/>
+            <input className='inputPassword inputLogin' type='password' placeholder='password' value={password}  onChange={(e)=>{setPassword(e.target.value)}}/>
+            </div>
+            <button className='ulogujSeBtn' onClick={
                 ()=>{console.log(username, password)
                     let isSuccessful=false;
                    usersArray.forEach(element => {
@@ -46,7 +48,7 @@ export default function Login({usersArray,setUser}) {
                       
             }
             }>Uloguj se</button>
-            <button onClick={()=>{
+            <button className='noneDisplay' onClick={()=>{
                 localStorage.setItem('username', null)
                 localStorage.setItem('password', null)
                 localStorage.setItem('id', null)

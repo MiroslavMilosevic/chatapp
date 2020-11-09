@@ -1,0 +1,125 @@
+*{ 
+     padding: 0; 
+    margin: 0%;
+}
+.nisiUlogovanParagraf{
+    background-color: red;
+    margin-top: 15%;
+    /* margin-bottom: 45%; */
+    text-align: center;
+    font-size: 3.2em;
+}
+.chatsHomeSpan{
+    display: block;
+    margin-top:1em ;
+    margin-bottom: 1em;
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+    font-size: 1.25em;
+    border-radius: 4px;
+    background-color: peru;
+    word-wrap: break-word;
+     
+
+}
+/* span{
+    display: block;
+    margin-top:1em ;
+    margin-bottom: 1em;
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+    font-size: 1.25em;
+    border-radius: 4px;
+    background-color: peru;
+    text-align: center;
+    word-wrap: break-word;
+} */
+
+
+.loginHeder{
+    background-color: chartreuse;
+    /* margin:0.35em ; */
+    margin-bottom: 0.25em;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2.15em;
+
+}
+.inputLogin{
+    
+    height:3em ;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    border-radius: 5px;
+   
+   
+}
+
+/* wrapers  _____________________________________________________________________________________________________________________________________________________________> */
+.loginWraper{
+
+    background-color:paleturquoise;
+    height: 100vh;
+    width: 100%;
+}
+.inputWraper{
+    display: block;
+}
+
+.homeSpanWraper{
+    background-color: paleturquoise;
+    height: 100%;
+    width: 100vw;
+    padding-top: 1%;
+    overflow-y:scroll;
+}
+.homeWraper{
+    background-color: paleturquoise;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden; 
+    overflow-x: hidden; 
+}
+/* .homeSpanWraper{
+    background-color: paleturquoise;
+    height: 100vh;
+    width: 100vw;
+}
+.homeWraper{
+    overflow-y: hidden; 
+    overflow-x: hidden; 
+    background-color: paleturquoise;
+    height: 100%;
+    width: 100vw;
+    padding-top: 1%;
+    overflow-y:scroll;
+} */
+
+
+/* buttons  _____________________________________________________________________________________________________________________________________________________________> */
+.ulogujSeBtn{
+    width:9em;
+    height:3em;
+    background-color:  chartreuse;
+    border-radius: 10px;
+}
+.noneDisplay{
+    display: none;
+}
+.goToLoginBtn{
+    width:45%;
+    height:4em;
+    background-color:  chartreuse;
+    border-radius: 10px;
+    margin-top: 10%;
+
+}
+.logOutBtn{
+    width: 20%;
+    height: 2.25em;
+    display: block;
+    margin-left: 1%;
+    background-color: cornflowerblue;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter as Router, Link, Redirect,  useHistory } from 'react-router-dom'
+// import { BrowserRouter as Router, Link, Redirect,  useHistory } from 'react-router-dom'
+import { BrowserRouter as Redirect,  useHistory } from 'react-router-dom'
 export default function LogOut({setUser}) {
     const history = useHistory();
     const logOutFnk =()=>{
@@ -16,7 +17,7 @@ export default function LogOut({setUser}) {
     
     return (
         <div>
-            <button onClick={()=>{
+            <button className='logOutBtn' onClick={()=>{
                      logOutFnk()
 
             }}>LogOut</button>

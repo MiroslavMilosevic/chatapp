@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, } from 'react';
 import { BrowserRouter as Redirect, useParams } from 'react-router-dom'
 import { getUserMessages, postMessage, postRedZaUpis, getRedZaUpis } from '../services/axios'
 import { v1 as uuid } from 'uuid'
@@ -70,6 +70,11 @@ export default function Chat({setUserApp}) {
         }
         setZajednickePoruke(tmp);
         console.log(zajednickePoruke);
+        if(nizPoruka.length>=11){
+           let tmp=[...nizPoruka];
+           tmp.shift()
+           setNizPoruka(tmp)
+           }
     }, [porukePrijatelja, nizPoruka])
 
     const sendMessage = () => {
@@ -80,8 +85,22 @@ export default function Chat({setUserApp}) {
             localStorage.setItem('redZaUpis', Number(localStorage.getItem('redZaUpis')) + 1)
             let tmp = [...nizPoruka];
             tmp.push({ id: user.id, idPoslao: id, poruka: inputPoruka, date: Date.parse(new Date().toString()), stringDate: (new Date).toString() });
+            if(Number(localStorage.getItem('redZaUpis'))>=10){ 
+                localStorage.setItem('redZaUpis','0')
+          
+              
+               }
+            //    if(nizPoruka.length>=10){
+            //     tmp.shift();
+            //    }
+
+               console.log(nizPoruka.length+'ovo je duzina niza poruka');
+               console.log(localStorage.getItem('redZaUpis')+'ovo red za upis');
+          
             setNizPoruka(tmp);
             setInputPoruka('');
+         
+            
         } else {
             alert(isMessageCorrect(inputPoruka)[1])
         }
@@ -118,7 +137,7 @@ export default function Chat({setUserApp}) {
 
             }} />
             {zajednickePoruke.sort((a, b) => a.date - b.date)
-                .map(el => { return (<div key={uuid()}><p key={uuid()}>{el.poruka + ' | ' + el.id + '   | '}</p></div>) })
+                .map(el => { return (<div key={uuid()}><span key={uuid()}>{el.poruka + ' |  el.id    | '}</span><button>Obrisi Poruku</button></div>) })
             }
 
         </div>

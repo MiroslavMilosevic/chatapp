@@ -1,14 +1,19 @@
+// import {Router as Router, Switch, Route, } from 'react-router-dom'
 import {Router as Router, Switch, Route, } from 'react-router-dom'
 import { HashRouter,} from "react-router-dom";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, } from 'react';
 import './App.css';
 import { usersArrayImported, } from './u&p/users'
 import Login from './components/Login'
 import Home from './components/Home'
 import Chat from './components/Chat'
+import GoToLogin from './components/GoToLogin'
+import './services/style.css'
 
 function App() {
  // const [nizPoruka, setNizPoruka] = useState([]);
+
+
   const [usersArray, setUsersArray] = useState([]);
   const [user, setUser] = useState(  {id:localStorage.getItem('id'), username:localStorage.getItem('username'),
    password:localStorage.getItem('password'), isLoged:localStorage.getItem('isLoged')});
@@ -48,22 +53,27 @@ function App() {
       <HashRouter>
 
         <Switch>
+
           <Route exact path="/home">
-       { user.isLoged!=='null'&&user.isLoged!==null ?  <Home usersArray={usersArray} setUser={setUser} /> : <p>nisi ulogovan</p> } 
-       <h1>home</h1>
+         
+       { user.isLoged!=='null'&&user.isLoged!==null ?  <Home usersArray={usersArray} setUser={setUser} /> : 
+       <><p className='nisiUlogovanParagraf'>nisi ulogovan</p><GoToLogin/></> } 
+      
+
           </Route>
           <Route exact path="/">
-          <h1>no name</h1>
-
-            <button onClick={() => {
-              console.log(usersArray)
-            }}>abcdefg</button>
+          <div className='loginWraper'>
+          <h1 className='loginHeder'>Login</h1>
+          {  <Login usersArray={usersArray}  setUser={setUser}/> }
+              </div>
+      
 
           </Route>
           <Route exact path="/login">
+            <div className='loginWraper'>
+          <h1 className='loginHeder'>Login</h1>
           {  <Login usersArray={usersArray}  setUser={setUser}/> }
-          <h1>login</h1>
-
+              </div>
           </Route>
           <Route exact path="/register">
           <h1>register</h1>
@@ -77,21 +87,6 @@ function App() {
 
       </HashRouter>
 
-
-
-
-
-      {/* <button onClick={()=>{console.log(nizUsera);}}>abcdefg</button> 
- <input type='text' value={inputPoruka} onChange={(e)=>{setInputPoruka(e.target.value)}}/>
-       <button onClick={()=>{
-         postMessage(inputPoruka);
-         let tmp=[...nizPoruka];
-         console.log(tmp);
-         tmp.push({date:new Date(), id: "1", poruka:inputPoruka});
-         setNizPoruka(tmp);
-         setInputPoruka('');
-       }}>Posalji Poruku</button>   
-  {nizPoruka.length>0 ? nizPoruka.sort((a,b)=>{return a-b}).map(el=>{return <p key={uuid()}>{el.poruka}</p>}):<p>{'Ucitava se...'}</p>} */}
     </div>
   );
 }
