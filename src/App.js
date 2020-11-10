@@ -80,7 +80,7 @@ function App() {
           </Route>
           <Route exact path="/chat/:id">
       
-          { user.isLoged!=='null'&&user.isLoged!==null ?  <Chat setUserApp={setUser} />: <p>nisi ulogovan</p> } 
+          { user.isLoged!=='null'&&user.isLoged!==null ?  <Chat setUserApp={setUser}  />: <p>nisi ulogovan</p> } 
             {/* {localStorage.getItem('user')=== ''? <ParagrafS2>Niste Ulogovani</ParagrafS2> : <Club niz={niz} setNiz={setNiz}></Club>} */}
           </Route>
         </Switch>

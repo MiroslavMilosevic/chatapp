@@ -9,6 +9,38 @@
     text-align: center;
     font-size: 3.2em;
 }
+.njegovaPorukaDiv{
+border-radius: 5px;
+background-color: sienna;
+word-wrap: break-word;
+margin-top: 1%;
+margin-bottom: 1px;
+margin-right: 20%;
+}
+
+.mojaPorukaDiv{
+border-radius: 5px;
+background-color:#24f277;
+word-wrap: break-word;
+margin-top: 1%;
+margin-bottom: 1%;
+margin-left: 20%;
+}
+.mojSpan{
+    word-wrap: break-word;
+
+}
+.njegovSpan{
+    word-wrap: break-word;
+
+}
+.divBtn{
+    /* width: 20%; 
+    float:right; */
+    margin-left: 80%;
+    border-radius: 20px;
+  
+}
 .chatsHomeSpan{
     display: block;
     margin-top:1em ;
@@ -76,29 +108,38 @@
     overflow-y:scroll;
 }
 .homeWraper{
-    background-color: paleturquoise;
+    /* background-color: #22f577; */
     height: 100vh;
     width: 100vw;
     overflow-y: hidden; 
     overflow-x: hidden; 
 }
-/* .homeSpanWraper{
+.chatWraper{
+    height: 25em;
+    width: 100vw;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    border-radius: 10px;
+    overflow-y: scroll;
+    background-color:#cdfaed;
+}
+.bigChatWraper{
+    overflow-y: hidden; 
+    overflow-x: hidden;  
     background-color: paleturquoise;
     height: 100vh;
-    width: 100vw;
 }
-.homeWraper{
-    overflow-y: hidden; 
-    overflow-x: hidden; 
-    background-color: paleturquoise;
-    height: 100%;
-    width: 100vw;
-    padding-top: 1%;
-    overflow-y:scroll;
-} */
 
 
 /* buttons  _____________________________________________________________________________________________________________________________________________________________> */
+.porukaInput{
+    height: 6%;
+    width: 30wv;
+    font-size: 1.2em;
+    border-radius:5px;
+    margin-bottom: 1%;
+}
+
 .ulogujSeBtn{
     width:9em;
     height:3em;
@@ -122,4 +163,8 @@
     display: block;
     margin-left: 1%;
     background-color: cornflowerblue;
+    margin-top: 1%;
+}
+.obrisiBtn{
+ border-radius: 5px;
 }

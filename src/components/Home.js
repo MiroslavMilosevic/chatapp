@@ -24,61 +24,9 @@ export default function Home({ usersArray,setUser }) {
              <h1>Home</h1>
               <> <button className='noneDisplay' onClick={() => { console.log(localStorage.getItem('isLoged')) }}>DUGME</button>
                <div className='homeSpanWraper'> 
-               {usersArray.map(el => <span className='chatsHomeSpan' key={uuid()}>Idi na Chat sa: <Link key={uuid()} to={`chat/${el.id}`}  >{el.username}</Link> </span>)} 
-               {/* <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>dfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfas</span>
-               <span>d21321113111</span> */}
+               {usersArray.filter(el=>{return el.id!==Number(localStorage.getItem('id')) })
+               .map(el => <span className='chatsHomeSpan' key={uuid()}>Idi na Chat sa: <Link key={uuid()} to={`chat/${el.id}`}  >{el.username}</Link> </span>)} 
+
 
                </div> </> 
         </div>    

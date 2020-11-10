@@ -44,6 +44,7 @@ export default function Login({usersArray,setUser}) {
                    });
                 if(!isSuccessful){
                     console.log('neuspesno');
+                    alert('Uneti username ili password nisu ispravni')
                 }
                       
             }
