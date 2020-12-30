@@ -60,7 +60,13 @@ export default function Login({usersArray,setUser}) {
                     )
         
             }}>Set to null</button>
-
+            <br/>
+            <div>
+                <p>If You want to try this app use next usernames:</p>
+                <p> username:marija  password : marija123</p>
+                <p>  username:pero  password : pero123</p>
+                
+            </div>
         </div>
     )
 }
